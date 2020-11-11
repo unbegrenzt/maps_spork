@@ -1,2 +1,2 @@
 # maps_spork
-maps pwa made with reactJs and leaflet
+maps pwa made with :heart_decoration: with reactJs :iphone:
