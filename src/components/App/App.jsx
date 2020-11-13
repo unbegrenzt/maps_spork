@@ -1,8 +1,12 @@
 import MapView from '../MapView/MapView.jsx';
+import PrimaryFindAppBar from '../PrimaryFindAppBar/PrimaryFindAppBar.jsx';
 
 function App() {
   return (
-    <MapView />
+    <>
+      <PrimaryFindAppBar />
+      <MapView />
+    </>
   );
 }
 
