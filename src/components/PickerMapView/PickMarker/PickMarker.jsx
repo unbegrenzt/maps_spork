@@ -14,7 +14,7 @@ const PickMarker = (props) => {
     });
 
     return (
-        <Marker position={position} eventHandlers={ props.eventHandlers }
+        <Marker position={position} eventHandlers={props.eventHandlers}
             ref={props.markerRef}>
             <Popup>You select this position</Popup>
         </Marker>

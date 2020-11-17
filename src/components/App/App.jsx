@@ -1,11 +1,9 @@
-import MapView from '../MapView/MapView.jsx';
-import PrimaryFindAppBar from '../PrimaryFindAppBar/PrimaryFindAppBar.jsx';
+import PickerMapView from '../PickerMapView/PickerMapView.jsx';
 
 function App() {
   return (
     <>
-      <PrimaryFindAppBar />
-      <MapView />
+      <PickerMapView />
     </>
   );
 }
