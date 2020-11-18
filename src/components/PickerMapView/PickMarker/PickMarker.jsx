@@ -3,8 +3,7 @@ import { useMapEvents, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 
 const PickMarker = (props) => {
-    const startPos = new L.LatLng(props.startPos[0], props.startPos[1]);
-    const [position, setPosition] = useState(startPos);
+    const [position, setPosition] = useState(props.startPos);
     let data;
     const map = useMapEvents({
         move() {

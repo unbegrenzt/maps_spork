@@ -1,6 +1,9 @@
 import React, { useRef, useState, useMemo } from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import FindAppBar from './FindAppBar/FindAppBar.jsx';
+import L from 'leaflet';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 import PickMarker from './PickMarker/PickMarker.jsx';
 
@@ -14,7 +17,8 @@ const MapContainerStyle = {
 const PickerMapView = () => {
 
     const pickMarkerRef = useRef(null);
-    const [pickedPos, setPickedPos] = useState(position);
+    const startPos = new L.LatLng(position[0], position[1]);
+    const [pickedPos, setPickedPos] = useState(startPos);
 
     const eventHandlers = useMemo(
         () => ({
@@ -30,16 +34,22 @@ const PickerMapView = () => {
 
     return (
         <>
-            <FindAppBar value={pickedPos} />
-            <MapContainer center={position} zoom={13}
-                style={MapContainerStyle}>
+            <FindAppBar startPos={startPos} value={pickedPos} />
+            <MapContainer
+                center={position}
+                zoom={13}
+                style={MapContainerStyle}
+            >
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <PickMarker startPos={position}
+                <PickMarker startPos={startPos}
                     eventHandlers={eventHandlers}
                     markerRef={pickMarkerRef} />
+                <Fab color="primary" aria-label="add">
+                    <AddIcon />
+                </Fab>
             </MapContainer >
         </>
     );

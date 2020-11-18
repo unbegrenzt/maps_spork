@@ -1,5 +1,4 @@
 import InputBase from '@material-ui/core/InputBase';
-import SearchIcon from '@material-ui/icons/Search';
 import { fade, makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -51,15 +50,14 @@ const ToolbarInput = (props) => {
     return (
         <div className={classes.search}>
             <div className={classes.searchIcon}>
-                <SearchIcon />
+                {props.children}
             </div>
             <InputBase
-                placeholder="Latitude"
+                placeholder={props.placeholder}
                 classes={{
                     root: classes.inputRoot,
                     input: classes.inputInput,
                 }}
-                inputProps={{ 'aria-label': 'search' }}
                 value={props.value}
                 readOnly={true}
             />
