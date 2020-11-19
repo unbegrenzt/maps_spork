@@ -16,7 +16,7 @@ export default function FindAppBar(props) {
 
     return (
         <>
-            <AppbarDef>
+            <AppbarDef refAppBar={props.refAppBar}>
                 <UpdatedToolbarInput
                     value={lat}
                 >
