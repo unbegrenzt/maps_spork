@@ -3,6 +3,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import FindAppBar from './FindAppBar/FindAppBar.jsx';
 import L from 'leaflet';
 import PickMarker from './PickMarker/PickMarker.jsx';
+import LocateFab from '../LocateFab/LocateFab.jsx'
 
 const position = [37.335556, -122.009167];
 
@@ -26,7 +27,7 @@ const PickerMapView = () => {
             },
         }),
         [],
-    )
+    );
 
     useLayoutEffect(() => {
         nav.current && setNavHeight(nav.current.clientHeight);
@@ -51,6 +52,7 @@ const PickerMapView = () => {
                 <PickMarker startPos={startPos}
                     eventHandlers={eventHandlers}
                     markerRef={pickMarkerRef} />
+                <LocateFab/>
             </MapContainer >
         </>
     );
