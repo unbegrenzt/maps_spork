@@ -1,6 +1,6 @@
 const colors = new Map();
 
-colors.set('primaryColor', '#6d4c41');
+colors.set('primaryColor', '#FFFFF');
 colors.set('primaryLightColor', '#9c786c');
 colors.set('primaryDarkColor', '#40241a');
 colors.set('secondaryColor', '#039be5');
