@@ -5,6 +5,11 @@ import MyLocationIcon from '@material-ui/icons/MyLocation';
 import BottomRight from '../../utils/BottomRight/BottomRight.jsx';
 import colors from '../../utils/colors';
 
+const fabStyle = {
+    backgroundColor: colors.get('secondaryColor'),
+    color: colors.get('secondaryTextColor')
+};
+
 const LocateFab = () => {
 
     const map = useMapEvents({
@@ -20,7 +25,7 @@ const LocateFab = () => {
     return (
         <BottomRight>
             <Fab
-                color={colors.get('secondaryColor')}
+                style={fabStyle}
                 aria-label="find"
                 onClick={getLocation}
             >

@@ -3,7 +3,7 @@ import { MapContainer, TileLayer } from 'react-leaflet';
 import FindAppBar from './FindAppBar/FindAppBar.jsx';
 import L from 'leaflet';
 import PickMarker from './PickMarker/PickMarker.jsx';
-import LocateFab from '../LocateFab/LocateFab.jsx'
+import LocateFab from '../LocateFab/LocateFab.jsx';
 
 const position = [37.335556, -122.009167];
 
@@ -46,8 +46,8 @@ const PickerMapView = () => {
                 style={{ height: `${window.innerHeight - navHeight}px` }}
             >
                 <TileLayer
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+                    url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
                 />
                 <PickMarker startPos={startPos}
                     eventHandlers={eventHandlers}
